@@ -1,0 +1,638 @@
+/* Genel stil kuralları */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* sayfanın minimum yüksekliği */
+    display: flex;
+    flex-direction: column;
+}
+
+#menu {
+    height: 80px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px; /* Logonun genişliğini küçülttüm */
+    height: 40px; /* Logonun yüksekliğini küçülttüm */
+}
+
+#logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.icon {
+    margin-right: 7px;
+    font-size: 16px;
+}
+
+/* index.php için stil kuralları */
+#index-banner {
+    background-color: gray;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#black {
+    height: 600px;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#icerik {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    width: 80%;
+    max-width: 800px;
+}
+
+#borsa-kuru, #viop, #kaldirac {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#borsa-kuru table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#borsa-kuru th, #borsa-kuru td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#borsa-kuru th {
+    background-color: #007bff;
+    color: white;
+}
+
+#borsa-kuru td {
+    background-color: #f8f8f8;
+}
+
+/* Hakkımızda sayfası için stil kuralları */
+#hakkimizda-banner {
+    background: linear-gradient(to right, #007bff, #00a2ff);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#hakkimizda-banner h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#hakkimizda-banner p.white-text {
+    font-size: 20px;
+    margin-top: 0;
+    color: white;
+}
+
+#hakkimizda-content {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    flex-grow: 1; /* esnek yerleşim için */
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h3 {
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.image-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* iletisim.php için stil kuralları */
+#iletisim {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#iletisim .container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+#iletisim h3 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#iletisim p {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+}
+
+#iletisim .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#iletisim label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#iletisim input[type="text"], #iletisim input[type="email"], #iletisim input[type="tel"], #iletisim textarea {
+    width: calc(100% - 20px);
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#iletisim textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#iletisim button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#iletisim button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.invalid-feedback {
+    display: none;
+    color: red;
+    font-size: 14px;
+}
+
+input:invalid ~ .invalid-feedback, textarea:invalid ~ .invalid-feedback {
+    display: block;
+    color: red;
+}
+
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: #ddd;
+}
+
+/* odeme.php için stil kuralları */
+#odeme {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#odeme .container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+#odeme h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#odeme .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#odeme label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#odeme input[type="text"], #odeme input[type="password"], #odeme input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#odeme button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#odeme button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* egitim.php için stil kuralları */
+#egitimler {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#egitimler .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#egitimler h3 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#egitimler .card {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+#egitimler .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#egitimler .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#egitimler .baslikcard {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+#egitimler .cardp, #egitimler .fiyat1 {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Yeni Eğitim Paketi Ekleme Formu */
+#egitim-ekle {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#egitim-ekle .container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+#egitim-ekle h3 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#egitim-ekle .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#egitim-ekle label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#egitim-ekle input[type="text"], #egitim-ekle input[type="number"], #egitim-ekle textarea {
+    width: calc(100% - 20px);
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#egitim-ekle textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#egitim-ekle button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#egitim-ekle button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Eğitim sayfası için görsel düzenleme */
+#egitimler .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#sepet {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#sepet h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#sepet ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sepet ul li {
+    font-size: 18px;
+    color: #666;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.urun {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.urun h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.urun p {
+    margin: 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+.satin-al-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.satin-al-button:hover {
+    background-color: #0056b3;
+}
+
+/* Eğitim kartları ve Ekle butonu için stil kuralları */
+.egitim {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.egitim:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.egitim h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.egitim p {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.egitim p strong {
+    color: #333;
+}
+
+.egitim form {
+    margin-top: 10px;
+}
+
+.egitim button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.egitim button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Eğitmen kartları için stil kuralları */
+.egitmen-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.egitmen-container h3 {
+    text-align: center;
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.egitmen-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.egitmen-card {
+    display: inline-block;
+    width: 300px;
+    margin: 0 1.5%;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.egitmen-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.egitmen-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.egitmen-card .baslikcard {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.egitmen-card .cardp {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+}
